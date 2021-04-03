@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c22385f9-eda0-477a-90f7-b86e7de859a0" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/scripts/ObjectPool.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/scripts/PuzzleBackground.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/scripts/PuzzleArea.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/scripts/BaseBlock.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/scripts/PuzzleUtility.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/scripts/AddMoveToward.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/PuzzleArea.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/BaseBlock.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/BackgroundBlock.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/ObjectPool.cs" />
+        <option value="$PROJECT_DIR$/Assets/Editor/LevelDataTextureCustomInspector.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/ScriptableObject/PuzzleTextureHolder.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/PuzzleUtility.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/Shuffle.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/DragDrapObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/Editor/LevelDataTextureCustomInspector.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/PuzzleBackground.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/IDragable.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/PuzzleBlock.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/TextureSlicer.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/Puzzle.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1qZ4J0lqk4I6kPKJAgQOVBhq2XE" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c22385f9-eda0-477a-90f7-b86e7de859a0" name="Default Changelist" comment="" />
+      <created>1617273709429</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1617273709429</updated>
+      <workItem from="1617273718455" duration="37000" />
+      <workItem from="1617273778092" duration="11953000" />
+      <workItem from="1617297179132" duration="2589000" />
+      <workItem from="1617304169783" duration="4151000" />
+      <workItem from="1617346462105" duration="6742000" />
+      <workItem from="1617390125202" duration="3768000" />
+      <workItem from="1617432313083" duration="3680000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2682" y="236" key="RiderGenerateDialog" timestamp="1617305643429">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2682" y="236" key="RiderGenerateDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1617305643429" />
+    <state x="2281" y="158" width="998" height="717" key="SettingsEditor" timestamp="1617273874467">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2281" y="158" width="998" height="717" key="SettingsEditor/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1617273874467" />
+    <state x="2536" y="240" key="run.anything.popup" timestamp="1617432600548">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2536" y="240" key="run.anything.popup/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1617432600548" />
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1617434962902">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1617434962902" />
+  </component>
+</project>

@@ -4,12 +4,11 @@ using UnityEngine;
 
 public interface IDragable
 {
-    void OnPointerClick();
+    void OnPointerClick(DragData dragData);
 
-    void OnDrag(Vector2 currentPosition);
-    void OnDrag();
-
+    void OnDrag(DragData dragData);
     void OnEndDrag();
+    
    
  
 }

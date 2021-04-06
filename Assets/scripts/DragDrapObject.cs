@@ -6,14 +6,12 @@ using UnityEngine;
 public class DragDrapObject : MonoBehaviour
 {
     [SerializeField] private bool _isMouseDrag;
-    
+
     private IDragable _dragableObjectTraget;
     private float _maximumRaycastDistance = 10;
 
     private void Update()
     {
-
-
         LeftMouseClickDown();
 
         LeftMouseButtonRealize();
@@ -29,12 +27,12 @@ public class DragDrapObject : MonoBehaviour
             _dragableObjectTraget = GetDragableObject(out hit);
             if (_dragableObjectTraget != null)
             {
-                _dragableObjectTraget?.OnPointerClick();
+                _dragableObjectTraget?.OnPointerClick(GetDragDataFromMousePosition(_dragableObjectTraget));
                 _isMouseDrag = true;
             }
         }
     }
-    
+
     /// <summary>
     /// Return Object with drag feature
     /// </summary>
@@ -43,7 +41,7 @@ public class DragDrapObject : MonoBehaviour
     private IDragable GetDragableObject(out RaycastHit hit)
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        
+
         if (Physics.Raycast(ray.origin, ray.direction * _maximumRaycastDistance, out hit))
         {
             Debug.DrawLine(ray.origin, hit.point);
@@ -68,14 +66,33 @@ public class DragDrapObject : MonoBehaviour
     {
         if (_isMouseDrag && Input.GetMouseButton(0))
         {
-            _dragableObjectTraget?.OnDrag(GetCurrentDragMousePosition());
+            _dragableObjectTraget?.OnDrag(GetDragDataFromMousePosition(_dragableObjectTraget));
         }
     }
 
-    
 
-    private Vector2 GetCurrentDragMousePosition()
+    public DragData GetDragDataFromMousePosition( IDragable dragedObject)
     {
-        return Camera.main.ScreenToWorldPoint(Input.mousePosition) - ((PuzzleBlock) _dragableObjectTraget).transform.position;
+        Transform objectTransform = ((PuzzleBlock) dragedObject).transform;
+        
+        Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 mouseOffset = mousePosition - (Vector2)objectTransform.position;
+        DragData dragData = new DragData(mousePosition, mouseOffset);
+        return dragData;
     }
+}
+
+public class DragData
+{
+    public Vector2 MousePosition;
+    public Vector2 MouseOffset;
+
+    
+    private Vector2 _delta;
+    public DragData(Vector2 mousePosition, Vector2 mouseOffset)
+    {
+        MousePosition = mousePosition;
+        MouseOffset = mouseOffset;
+    }
+    
 }

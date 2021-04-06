@@ -8,14 +8,14 @@ public class PuzzleBlock : BaseBlock, IDragable
 {
     public bool IsSolved;
 
-    public int gh;
     [SerializeField] private Vector2 _startPosition;
-
+    private Vector2 _mouseOffset;
     private const float MAX_SCALE_SIZE = 1.1f;
-    
-    public override void Init(Texture2D image,Vector2 position)
+
+
+    public override void Init(Texture2D image, Vector2 position)
     {
-        _startPosition =  transform.position  = position;
+        _startPosition = transform.position = position;
         SetMainTextureMaterial(ref image);
     }
 
@@ -26,36 +26,36 @@ public class PuzzleBlock : BaseBlock, IDragable
         GetComponent<MeshRenderer>().material.mainTexture = image;
     }
 
-    public void OnPointerClick()
+
+    public void OnPointerClick(DragData dragData)
     {
         if (IsSolved) return;
 
-        transform.localScale *= (Vector2.one * MAX_SCALE_SIZE);
-        transform.position -= Vector3.forward * 2f;
+        _mouseOffset = dragData.MouseOffset;
+
+        HighlightBlockObject();
     }
 
-    public void OnDrag(Vector2 currentPosition)
+    public void OnDrag(DragData dragData)
     {
         if (IsSolved) return;
+
+        Vector2 currentPosition = (dragData.MousePosition - (Vector2) transform.position) - _mouseOffset;
 
         transform.Translate(currentPosition);
     }
 
-    public void OnDrag()
-    {
-    }
 
     public void OnEndDrag()
     {
         if (IsSolved) return;
 
-        transform.localScale *= (Vector2.one / MAX_SCALE_SIZE);
-        transform.position = new Vector3(transform.position.x, transform.position.y, 0);
-
         if (IsCorrectPosition())
         {
             SetToSolvedBlock();
         }
+
+        UnHighlightBlockObject();
     }
 
     void SetToSolvedBlock()
@@ -65,6 +65,7 @@ public class PuzzleBlock : BaseBlock, IDragable
         transform.position = _startPosition;
         transform.position += Vector3.forward * 2;
     }
+
     bool IsCorrectPosition()
     {
         float halfBlockWidth = PuzzleUtility.GetBlockObjectScaleSize(Puzzle.currentPuzzlePerline) / 2;
@@ -77,5 +78,17 @@ public class PuzzleBlock : BaseBlock, IDragable
         return false;
     }
 
-   
+
+    private void HighlightBlockObject()
+    {
+        transform.localScale *= (Vector2.one * MAX_SCALE_SIZE);
+        transform.position -= Vector3.forward * 2f;
+    }
+
+
+    private void UnHighlightBlockObject()
+    {
+        transform.localScale *= (Vector2.one / MAX_SCALE_SIZE);
+        transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+    }
 }

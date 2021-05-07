@@ -16,9 +16,7 @@ namespace PuzzleTestProject
         /// <param name="speed">Speed movment to end position</param>
         public static void Move(this GameObject target, Vector2 targetPosition, float speed = 1)
         {
-
             MoveToward.Instance.Move(target.transform, targetPosition, speed);
-            
         }
 
       

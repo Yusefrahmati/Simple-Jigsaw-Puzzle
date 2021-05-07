@@ -22,7 +22,6 @@ public class Puzzle : MonoBehaviour
         _puzzleBackground = GetComponentInChildren<PuzzleBackground>();
     }
 
-
     public void CreatePuzzle(LevelTextureData levelData)
     {
         _timeToShufflePuzzle = levelData.TimeToShuffle;

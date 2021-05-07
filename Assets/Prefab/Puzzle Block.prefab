@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5170562435716024716}
   - component: {fileID: 6010179229399279739}
   m_Layer: 0
-  m_Name: Quad
+  m_Name: Puzzle Block
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,7 +73,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: e2b10bed21b99dd4bbc54cf3adcfe563, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

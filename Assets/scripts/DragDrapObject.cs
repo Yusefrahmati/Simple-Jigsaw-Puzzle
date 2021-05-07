@@ -71,7 +71,7 @@ public class DragDrapObject : MonoBehaviour
     }
 
 
-    public DragData GetDragDataFromMousePosition( IDragable dragedObject)
+    public DragData GetDragDataFromMousePosition(IDragable dragedObject)
     {
         Transform objectTransform = ((PuzzleBlock) dragedObject).transform;
         

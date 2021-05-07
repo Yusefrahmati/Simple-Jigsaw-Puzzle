@@ -13,6 +13,7 @@ public class Shuffle : MonoBehaviour
     //Move a list of block puzzle to random position in shuffle area 
     public void ShffleAllBlocks(params PuzzleBlock[] blockTransform)
     {
+     
         GameManager.Instance.gameState = GameState.Play;
         for (int i = 0; i < blockTransform.Length; i++)
         {
@@ -41,6 +42,5 @@ public class Shuffle : MonoBehaviour
         Gizmos.DrawWireCube(_shuffleArea.center, _shuffleArea.size);
         Gizmos.DrawWireCube(new Vector2(-_shuffleArea.center.x, _shuffleArea.center.y), _shuffleArea.size);
 
-       
     }
 }

@@ -19,8 +19,8 @@ public class LevelDataTextureCustomInspector : Editor
 
     public override void OnInspectorGUI()
     {
-        
-        
+       
+      
         DrawAddBtn();
         
         DrawLine(Color.green);

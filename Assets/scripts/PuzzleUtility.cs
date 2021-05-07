@@ -16,12 +16,12 @@ namespace PuzzleTestProject
         /// <param name="speed">Speed movment to end position</param>
         public static void Move(this GameObject target, Vector2 targetPosition, float speed = 1)
         {
-            MoveToward moveToward = target.AddComponent<MoveToward>();
-            moveToward.targePosition = targetPosition;
-            moveToward.speed = speed;
+
+            MoveToward.Instance.Move(target.transform, targetPosition, speed);
+            
         }
 
-        
+      
         /// <summary>
         /// Divide the width of the puzzle
         /// </summary>

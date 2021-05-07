@@ -2,22 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveToward : MonoBehaviour
+public class MoveToward : Singleton<MoveToward>
 {
-
-    public Vector2 targePosition;
-    public float speed = 1;
     
-
-    private float step;
-    void Update()
+    public void Move(Transform objectToMove, Vector3 targetPos, float speed)
     {
-        step = speed * Time.deltaTime;
-        transform.position = Vector2.MoveTowards(transform.position, targePosition,step);
+        StartCoroutine(MoveFromTo(objectToMove,targetPos,speed));
+    }
 
-        if (Vector3.Distance(transform.position,targePosition)<0.01f)
+    IEnumerator MoveFromTo(Transform objectToMove, Vector3 targetPos, float speed)
+    {
+        Vector3 a = objectToMove.transform.position;
+
+        float step = (speed / (a - targetPos).magnitude) * Time.fixedDeltaTime;
+        float t = 0;
+        while (t <= 1.0f)
         {
-            this.enabled = false;
+            t += step; // Goes from 0 to 1, incrementing by step each time
+            objectToMove.position = Vector3.Lerp(a, targetPos, t); // Move objectToMove closer to b
+            yield return new WaitForFixedUpdate();         // Leave the routine and return here in the next frame
         }
+        objectToMove.position = targetPos;
     }
 }

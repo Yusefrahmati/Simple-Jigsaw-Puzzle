@@ -34,7 +34,7 @@ public class DragDrapObject : MonoBehaviour
     }
 
     /// <summary>
-    /// Return Object with drag feature
+    /// Return Object with drag Interafce
     /// </summary>
     /// <param name="hit"></param>
     /// <returns></returns>

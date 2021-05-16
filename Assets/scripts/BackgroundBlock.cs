@@ -4,17 +4,11 @@ using UnityEngine;
 
 public class BackgroundBlock : BaseBlock
 {
-    public  void SetColorMaterial(bool IsGray)
+
+
+    public void SetColorMaterial(Color tileColor)
     {
         Material material = gameObject.GetComponent<MeshRenderer>().material;
-        
-        if (IsGray)
-        {
-            material.color = Color.gray;
-        }
-        else
-        {
-            material.color = Color.white;
-        }
+        material.color = tileColor;
     }
 }
